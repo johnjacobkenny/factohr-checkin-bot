@@ -1,4 +1,4 @@
-export const chrome_args = [
+const chrome_args = [
     '--autoplay-policy=user-gesture-required',
     '--disable-background-networking',
     '--disable-background-timer-throttling',
@@ -36,3 +36,7 @@ export const chrome_args = [
     '--use-gl=swiftshader',
     '--use-mock-keychain',
 ];
+
+module.exports = {
+    chrome_args
+}

@@ -1,7 +1,7 @@
 const usernameSelector = "#txtUsername";
 const passwordSelector = "#txtPassword";
 
-export const login = async (page) => {
+const login = async (page) => {
     await page.goto("https://app2.factohr.com/matter/Security/Login")
     await page.waitForTimeout(1000)
 
@@ -17,7 +17,7 @@ export const login = async (page) => {
     await page.waitForNavigation()
 }
 
-export const punchIn = async (page) => {
+const punchIn = async (page) => {
     let response = null;
 
     await page.goto("https://app2.factohr.com/matter/site/Attendance/OnlineAttendance.aspx")
@@ -31,4 +31,9 @@ export const punchIn = async (page) => {
         response = "Something went wrong"
 
     return response;
+}
+
+module.exports = {
+    punchIn,
+    login
 }
