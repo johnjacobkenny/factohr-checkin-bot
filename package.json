@@ -15,7 +15,8 @@
     "unit-test": "mocha test/index.test.js test/*unit*test.js test/*integration*test.js --timeout=6000 --exit",
     "system-test": "mocha test/*system*test.js --timeout=600000 --exit",
     "all-test": "npm run unit-test && npm run system-test",
-    "test": "npm -- run unit-test"
+    "test": "npm -- run unit-test",
+    "publish": "gcloud beta functions deploy factohr-checkin --gen2 --runtime nodejs16 --trigger-http --entry-point factoHRCheckin --source . --allow-unauthenticated --memory=1024MB"
   },
   "dependencies": {
     "@google-cloud/debug-agent": "^5.0.0",
