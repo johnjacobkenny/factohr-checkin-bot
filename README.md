@@ -8,6 +8,8 @@
    "puppeteer-extra-plugin-stealth": "^2.4.9"
 Seehttps://github.com/alixaxel/chrome-aws-lambda:
 
+`gcloud beta functions deploy factohr-checkin --gen2 --runtime nodejs16 --trigger-http --entry-point factoHRCheckin --source . - -allow-unauthenticated --memory=1024MB`
+
 * [Cloud Functions Hello World tutorial][tutorial]
 * [Cloud Functions Hello World sample source code][code]
 
