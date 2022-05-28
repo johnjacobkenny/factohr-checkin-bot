@@ -1,9 +1,18 @@
 # FactoHR Punch In Automation using Puppeteer and Google Cloud
 
-This project is used to automate the checkin flow in FactoHR. This is required because of the bad UX requiring 3 or 4 clicks to checkin.
+This project is used to automate the checkin flow in FactoHR. This is required because of the bad UX requiring 3 or 4 clicks to checkin. Right now this is targeting the Matter domain, but you can customize the URL in `checkin.js:5` and `checkin.js:23` to fit your use case.
 
 ## Publish to google cloud
 `npm run publish`
+
+## How to use
+Once you publish the cloud function, this will give you a URL for it. You can send a post request to that URL with the following JSON body,
+```
+{
+    "username": "...",
+    "password": "..."
+}
+```
 
 ## Future
 Take a look at these packages for future,
