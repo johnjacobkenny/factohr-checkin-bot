@@ -20,7 +20,7 @@ functions.http('factoHRCheckin', async (req, res) => {
     const browser = await p.launch({ args: chrome_args })
     const page = await browser.newPage()
 
-    await login(page)
+    await login(page, username, password)
     response = await punchIn(page)
     await page.close()
   }

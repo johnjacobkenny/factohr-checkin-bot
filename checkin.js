@@ -1,7 +1,7 @@
 const usernameSelector = "#txtUsername";
 const passwordSelector = "#txtPassword";
 
-const login = async (page) => {
+const login = async (page, username, password) => {
     await page.goto("https://app2.factohr.com/matter/Security/Login")
     await page.waitForTimeout(1000)
 
